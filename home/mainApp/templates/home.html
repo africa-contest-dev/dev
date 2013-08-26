@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Set the viewport width to device width for mobile -->
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/ico" href="static/images/favicon.ico"/>
+		<title>AfriContest Home</title>
+
+		<link rel="stylesheet" href="static/css/normalize.css">
+		<link rel="stylesheet" href="static/css/foundation.css">
+
+		<script src="static/src/custom.modernizr.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="static/src/form.js"></script>
+		<script>
+			$(document).ready(
+				function () {
+					bind_all();
+				}
+			);
+		</script>
+
+	</head>
+	<body>
+
+		<!-- Header and Nav -->
+
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="static/images/logo.png" style="height: 90px"></h1>
+			</div>
+			<div class="large-9 columns">
+				<ul class="button-group right">
+					<li>
+						<a href="#" class="button">Home</a>
+					</li>
+					<li>
+						<a href="#" class="button">About</a>
+					</li>
+					<li>
+						<a href="#" class="button">Apply</a>
+					</li>
+					<li>
+						<a href="#" id="login_menu" class="button selected">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- End Header and Nav -->
+
+		<!-- First Band (Image) -->
+
+		<div class="row">
+			<div class="large-12 columns" style="position: relative">
+				<div id="login_form" class="form" style="right:10px; margin-top: -20px; z-index:2; margin-bottom: 100px; position: absolute; opacity: 0.9">
+					<div>
+						<input class="required" placeholder="Email (required)" type="text">
+					</div>
+					<div>
+						<input class="required" placeholder="Password (required)" type="password">
+					</div>
+					<div>
+						<input class="button" type="submit" value="LOGIN" style="height: 30px; padding: 5px">
+					</div>
+				</div>
+				<img src="static/images/placeholder_header.jpg">
+
+				<hr>
+			</div>
+		</div>
+		<!-- Second Band (Image Left with Text) -->
+
+		<div class="row">
+			<div class="large-8 columns">
+				<h4>Some text here:</h4>
+				<div class="row">
+					<div class="large-6 columns">
+						<p>
+							<b>Illah Nourbakhsh. Tech review: May 14, 2013</b>
+							<br/>
+							<br/>
+In the book Race Against the Machine, Erik Brynjolfsson and Andrew McAfee of MIT’s Sloan School of Management present a chart showing U.S. productivity, GDP, employment, and income from 1953 to 2011. The chart looks as you would expect from 1953 until the mid-1980s, with every one of the measures rising together: employees work more productively, companies make more money, and more hires occur as the middle class swells.<br/>
+
+.......
+						</p> 
+						<br/>
+					</div>
+					<div class="large-6 columns">
+						<p>
+							<br/>
+							<br/>
+							<br/>
+So how do we deal with the impending mass migration of robots into our middle class? Perhaps we should start by talking about it over dinner (robots don’t eat with us yet). I submit to you four dinnertime conversation starters, each of which I believe captures something essential to understanding why the impending Robot Revolution may be nothing like the Industrial Revolution<br/>
+.......
+
+						</p>
+						<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Third Band (Image Right with Text) -->
+
+		<div class="row">
+			<div class="large-8 columns">
+				<h4>Other text here:</h4>
+				<p><b>Chu. MIT News Office: March 8, 2013</b></p>
+				<p>
+				A 70-pound “cheetah” robot designed by MIT researchers may soon outpace its animal counterparts in running efficiency: In treadmill tests, the researchers have found that the robot — about the size and weight of an actual cheetah — wastes very little energy as it trots continuously for up to an hour and a half at 5 mph. The key to the robot’s streamlined stride: lightweight electric motors, set into its shoulders, that produce high torque with very little heat wasted<br/>
+				......
+				</p>
+			</div>
+			<div class="large-4 columns">
+				<img src="static/images/placeholder_smallest.jpg">
+			</div>
+		</div>
+
+		<!-- Footer -->
+
+		<footer class="row">
+			<div class="large-12 columns">
+				<hr />
+				<div class="row">
+					<div class="large-6 columns">
+						<a href="http://mit.edu/"><img src="static/images/mit_logo.png"></a>
+						<p>
+							&copy; c
+						</p>
+					</div>
+					<div class="large-6 columns">
+						<ul class="inline-list right">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#">Admin</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+document.write('<script src=static/src/' +
+('__proto__' in {} ? 'zepto' : 'jquery') +
+'.js><\/script>')
+		</script>
+		<script src="static/src/foundation.min.js"></script>
+		<script>
+$(document).foundation();
+		</script>
+
+	</body>
+</html>
