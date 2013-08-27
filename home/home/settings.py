@@ -54,7 +54,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT =  os.path.join(ROOT_PATH, 'static')
+MEDIA_ROOT =  os.path.join(ROOT_PATH, os.pardir, 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -65,7 +65,7 @@ MEDIA_URL = '/static/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT =  os.path.join(ROOT_PATH, 'static')
+STATIC_ROOT =  os.path.join(ROOT_PATH, os.pardir, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -73,7 +73,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    "/home/static"
+    "/static"
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -113,6 +113,7 @@ ROOT_URLCONF = 'home.urls'
 WSGI_APPLICATION = 'home.wsgi.application'
 
 TEMPLATE_DIRS = (
+    os.path.join(ROOT_PATH, os.pardir, 'webFiles')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

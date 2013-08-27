@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'home.views.home', name='home'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': os.path.join(PROJECT_ROOT, 'static')}),
+        {'document_root': os.path.join(PROJECT_ROOT, os.pardir, 'webFiles/static')}),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )
