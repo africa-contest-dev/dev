@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/ico" href="static/images/favicon.ico"/>
+    <title>Fade In Test Page</title>
+
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/foundation.css">
+
+    <script src="static/src/custom.modernizr.js"></script>
+    <script type="text/javascript" src="static/src/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="static/src/custom.js"></script>
+    <script src="static/src/form.js"></script>
+    <script>
+        $(document).ready(
+                function () {
+                    bind_all();
+                }
+        );
+    </script>
+
+</head>
+<body>
+<!-- Header and Nav -->
+
+<div class="row">
+    <div class="large-3 columns">
+        <h1><img src="static/images/logo.png" style="height: 90px"></h1>
+    </div>
+    <div class="large-9 columns">
+        <ul class="button-group right">
+            <li>
+                <a href="#" class="button">Home</a>
+            </li>
+            <li>
+                <a class="transition" href="/fade-out/"><button type="button">Fade Out</button></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- End Header and Nav -->
+
+<!-- First Band (Image) -->
+<div class="row">
+    <div class="large-12 columns" style="position: relative">
+        <img src="static/images/blank-map-of-africa.gif">
+        <hr>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+                <a href="http://mit.edu/"><img src="static/images/mit_logo.png"></a>
+                <p>
+                    &copy; c
+                </p>
+            </div>
+            <div class="large-6 columns">
+                <ul class="inline-list right">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.write('<script src=static/src/' +
+            ('__proto__' in {} ? 'zepto' : 'jquery') +
+            '.js><\/script>')
+</script>
+<script src="static/src/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
+</body>
+</html>
