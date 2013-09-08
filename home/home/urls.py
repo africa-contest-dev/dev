@@ -9,6 +9,7 @@ PROJECT_ROOT = os.path.dirname(__file__)
 
 urlpatterns = patterns('',
     url(r'^$', 'mainApp.views.homePage', name='home'),
+     url(r'^landing/(?P<page_number>\w+)', 'mainApp.views.landing'),
     # url(r'^$', 'home.views.home', name='home'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
