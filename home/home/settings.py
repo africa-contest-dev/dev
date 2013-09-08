@@ -1,6 +1,7 @@
 # Django settings for home project.
 
 import os
+import sys
 
 #Note doesn't include last backslash
 ROOT_PATH = os.path.dirname(__file__)
@@ -60,7 +61,7 @@ MEDIA_ROOT =  ""
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/static/'
+#MEDIA_URL = '/static/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -70,7 +71,12 @@ STATIC_ROOT =  ""
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+import socket
+if sys.argv[1] == 'runserver':
+    STATIC_URL = 'http://127.0.0.1:8000/static/'
+else:
+    STATIC_URL = 'http://eica.scripts.mit.edu/static/'
+
 
 # Additional locations of static files
 STATICFILES_DIRS = (
