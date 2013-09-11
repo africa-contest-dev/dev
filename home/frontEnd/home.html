@@ -2,64 +2,71 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
-	<!--<![endif]-->
-	<head>
-		<meta charset="utf-8" />
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="{{ STATIC_URL }}images/favicon.ico"/>
+    <title>EIC: Africa</title>
 
-		<!-- Set the viewport width to device width for mobile -->
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/ico" href="static/images/favicon.ico"/>
-		<title>AfriContest Home</title>
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}css/foundation.css" rel="stylesheet" type="text/css">
+    <style>
+        img[usemap]{
+            border: none;
+            height: auto;
+            max-width: 100%;
+            width: auto;
+        }
+    </style>
+    <!-- Le scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}src/fade.js"></script>
+    <script src="{{ STATIC_URL }}src/form.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                bind_all();
+            }
+        );
+    </script>
 
-		<link rel="stylesheet" href="static/css/normalize.css">
-		<link rel="stylesheet" href="static/css/foundation.css">
+    <style type="text/css"></style>
+</head>
+<body>
+    <!-- Header and Nav -->
+    <div class="row">
+        <div class="large-3 columns">
+            <a href="/home/"><img src="{{ STATIC_URL }}images/logo.png" style="height: 90px"></a>
+        </div>
+        <div class="large-9 columns">
+            <ul class="button-group right">
+                <li>
+                    <a href="/home/" class="button selected">Home</a>
+                </li>
+                <li>
+                    <a href="/about/" class="button">About</a>
+                </li>
+                <li>
+                    <a href="/apply/" class="button">Apply</a>
+                </li>
+                <li>
+                    <a href="/contact/" class="button">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#" id="login_menu" class="button">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- End Header and Nav -->
 
-		<script src="static/src/custom.modernizr.js"></script>
-		<script type="text/javascript" src="static/src/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="static/src/custom.js"></script>
-		<script src="static/src/form.js"></script>
-		<script>
-			$(document).ready(
-				function () {
-					bind_all();
-				}
-			);
-		</script>
-
-	</head>
-	<body>
-
-		<!-- Header and Nav -->
-
-		<div class="row">
-			<div class="large-3 columns">
-				<h1><img src="static/images/logo.png" style="height: 90px"></h1>
-			</div>
-			<div class="large-9 columns">
-				<ul class="button-group right">
-					<li>
-						<a href="#" class="button">Home</a>
-					</li>
-					<li>
-                        <a class="transition" href="/fade-in/"><button type="button">Fades</button></a>
-					</li>
-					<li>
-						<a href="#" class="button">Apply</a>
-					</li>
-					<li>
-						<a href="#" id="login_menu" class="button selected">Login</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- End Header and Nav -->
-
-		<!-- First Band (Image) -->
-
-		<div class="row">
-			<div class="large-12 columns" style="position: relative">
-				<div id="login_form" class="form" style="right:10px; margin-top: -20px; z-index:2; margin-bottom: 100px; position: absolute; opacity: 0.9">
+    <!-- Image map -->
+    <div class="row">
+        <div class="large-12 columns" style="position: relative">
+            <h4 class="text-center">Choose a country from the map</h4>
+            <div style="text-align:center; margin-left:auto; margin-right:auto;">
+				<div id="login_form" class="form hide" style="right:10px; margin-top: -20px; z-index:2; margin-bottom: 100px; position: absolute; opacity: 0.9">
 					<div>
 						<input class="required" placeholder="Email (required)" type="text">
 					</div>
@@ -70,94 +77,59 @@
 						<input class="button" type="submit" value="LOGIN" style="height: 30px; padding: 5px">
 					</div>
 				</div>
-				<img src="static/images/placeholder_header.jpg">
+                <img src="{{ STATIC_URL }}images/map-of-africa.png" border="0" width="1024" height="875" usemap="#map" />
+                <map name="map">
+                    <!-- #$-:Image map file created by GIMP Image Map plug-in -->
+                    <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+                    <!-- #$-:Please do not edit lines starting with "#$" -->
+                    <!-- #$VERSION:2.3 -->
+                    <!-- #$AUTHOR:Kopiso  -->
+                    <area shape="poly" coords="543,733,543,775,533,784,522,783,517,782,516,777,515,776,512,774,509,774,508,779,506,780,520,812,525,819,525,828,524,831,520,832,524,839,527,843,526,846,527,848,530,848,533,852,534,852,535,854,541,855,547,853,555,852,567,850,570,846,577,848,581,847,584,847,592,849,597,847,603,846,604,843,617,843,640,823,646,815,651,810,658,803,663,792,669,784,676,777,680,767,681,755,676,755,675,755,674,745,672,728,670,708,663,702,657,701,650,701,647,700,643,700,643,703,637,705,631,709,628,711,623,715,620,721,613,726,610,731,607,733,602,740,596,743,587,740,583,740,579,739,576,745,569,752,565,755,558,755,553,755,551,753,552,748,552,742,548,738" alt="South Africa" href="/home/za/" />
+                    <area shape="poly" coords="696,412,700,415,700,422,706,427,708,435,706,440,695,457,699,462,698,464,698,468,736,490,738,498,754,508,757,504,763,490,767,485,777,476,778,475,771,468,771,428,777,421,781,415,777,414,770,412,765,412,762,416,756,419,754,421,745,420,741,418,736,416,726,409,716,408,707,408,701,408" alt="Kenya" href="/home/ke/" />
+                    <area shape="poly" coords="482,316,481,320,482,322,485,327,485,330,483,333,480,336,476,339,472,347,470,354,467,364,463,366,462,369,454,388,451,391,447,390,443,389,441,386,432,386,431,389,429,391,427,394,425,399,421,407,421,409,424,415,429,416,431,414,431,419,434,424,433,431,433,434,450,434,454,433,465,433,481,433,490,435,500,440,501,433,501,426,490,417,484,405,484,394,493,376,488,361,481,358,478,353,482,350,488,350,493,350,492,346,488,339,488,327,486,320" alt="Cameroon" href="/home/cm/" />
+                    <area shape="poly" coords="328,339,297,339,295,342,298,345,299,355,299,356,299,359,302,368,300,371,298,375,297,378,294,383,294,387,296,394,298,397,299,399,299,402,299,404,304,407,308,406,315,403,319,402,330,396,335,395,339,395,341,392,335,387,335,379,334,365,334,359,333,350,330,346,327,343" alt="Ghana" href="/home/gh/" />
+                    <area shape="poly" coords="357,389,374,389,378,390,382,395,385,397,387,400,386,403,388,406,389,409,392,410,396,411,401,411,405,408,409,408,412,409,415,407,417,406,418,406,421,403,423,398,423,393,429,388,431,384,438,383,442,383,445,387,448,387,451,388,459,372,459,367,465,362,467,356,472,339,478,334,482,332,483,327,482,325,480,322,480,318,480,314,472,307,471,307,468,309,468,310,465,310,463,313,462,315,459,314,456,313,454,311,452,311,449,312,438,312,430,318,422,317,412,313,409,312,406,316,402,317,394,310,389,308,381,307,375,310,371,314,371,318,365,323,367,326,365,329,365,334,366,335,367,337,368,340,367,344,366,347,367,349,362,356,360,361,357,365,357,375,357,385" alt="Nigeria" href="/home/ng/" />
+                    <area shape="poly" coords="598,215,665,216,667,212,668,214,672,216,684,216,686,216,689,218,695,218,696,215,700,211,702,213,704,206,706,205,709,206,712,203,712,194,713,192,712,190,709,188,696,167,694,154,690,150,690,145,682,136,679,129,678,126,676,112,678,110,681,121,682,128,686,132,690,140,694,146,699,144,700,139,700,133,703,128,702,119,697,109,696,102,693,105,690,107,682,107,678,106,676,106,675,102,669,100,660,100,660,102,657,102,651,103,640,109,628,105,618,102,612,100,600,99,598,100,595,101,595,106,596,115,593,121,595,126,595,129,598,132,598,145" alt="Egypt" href="/home/eg/" />
+                </map>
+            </div>
+        </div>
+    </div>
 
-				<hr>
-			</div>
-		</div>
-		<!-- Second Band (Image Left with Text) -->
-
-		<div class="row">
-			<div class="large-8 columns">
-				<h4>Some text here:</h4>
-				<div class="row">
-					<div class="large-6 columns">
-						<p>
-							<b>Illah Nourbakhsh. Tech review: May 14, 2013</b>
-							<br/>
-							<br/>
-In the book Race Against the Machine, Erik Brynjolfsson and Andrew McAfee of MIT’s Sloan School of Management present a chart showing U.S. productivity, GDP, employment, and income from 1953 to 2011. The chart looks as you would expect from 1953 until the mid-1980s, with every one of the measures rising together: employees work more productively, companies make more money, and more hires occur as the middle class swells.<br/>
-
-.......
-						</p> 
-						<br/>
-					</div>
-					<div class="large-6 columns">
-						<p>
-							<br/>
-							<br/>
-							<br/>
-So how do we deal with the impending mass migration of robots into our middle class? Perhaps we should start by talking about it over dinner (robots don’t eat with us yet). I submit to you four dinnertime conversation starters, each of which I believe captures something essential to understanding why the impending Robot Revolution may be nothing like the Industrial Revolution<br/>
-.......
-
-						</p>
-						<br/>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Third Band (Image Right with Text) -->
-
-		<div class="row">
-			<div class="large-8 columns">
-				<h4>Other text here:</h4>
-				<p><b>Chu. MIT News Office: March 8, 2013</b></p>
-				<p>
-				A 70-pound “cheetah” robot designed by MIT researchers may soon outpace its animal counterparts in running efficiency: In treadmill tests, the researchers have found that the robot — about the size and weight of an actual cheetah — wastes very little energy as it trots continuously for up to an hour and a half at 5 mph. The key to the robot’s streamlined stride: lightweight electric motors, set into its shoulders, that produce high torque with very little heat wasted<br/>
-				......
-				</p>
-			</div>
-			<div class="large-4 columns">
-				<img src="static/images/placeholder_smallest.jpg">
-			</div>
-		</div>
-
-		<!-- Footer -->
-
+    <!-- Footer -->
 		<footer class="row">
 			<div class="large-12 columns">
 				<hr />
 				<div class="row">
 					<div class="large-6 columns">
-						<a href="http://mit.edu/"><img src="static/images/mit_logo.png"></a>
+						<a href="http://mit.edu/"><img src="{{ STATIC_URL }}images/mit_logo.png"></a>
 						<p>
-							&copy; c
+							&copy; 2013
 						</p>
 					</div>
 					<div class="large-6 columns">
 						<ul class="inline-list right">
 							<li>
-								<a href="#">Home</a>
+								<a href="/home/">Home</a>
 							</li>
 							<li>
-								<a href="#">Admin</a>
+								<a href="/admin/">Admin</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer><!-- End Footer -->
 
-		<script>
-document.write('<script src=static/src/' +
-('__proto__' in {} ? 'zepto' : 'jquery') +
-'.js><\/script>')
-		</script>
-		<script src="static/src/foundation.min.js"></script>
-		<script>
-$(document).foundation();
-		</script>
-
-	</body>
+    <script src="{{ STATIC_URL }}src/jquery.rwdImageMaps.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+        });
+    </script>
+    <script type="text/javascript">
+        $('login_menu').click(function(e){
+            $('login_form').show();
+        });
+    </script>
+</body>
 </html>

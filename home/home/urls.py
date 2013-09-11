@@ -8,8 +8,13 @@ admin.autodiscover()
 PROJECT_ROOT = os.path.dirname(__file__)
 
 urlpatterns = patterns('',
-    url(r'^$', 'mainApp.views.homePage', name='home'),
-     url(r'^landing/(?P<page_number>\w+)', 'mainApp.views.landing'),
+    url(r'^$', 'mainApp.views.landingPage', name='landing-home'),
+     # url(r'^landing/(?P<page_number>\w+)', 'mainApp.views.landing'),
+    url(r'^home/$', 'mainApp.views.homePage', name='home'),
+    url(r'^home/(?P<country_code>\w+)/$', 'mainApp.views.countryPage'),
+    url(r'^about/$', 'mainApp.views.aboutPage', name='about'),
+    url(r'^contact/$', 'mainApp.views.contactPage', name='contact'),
+    url(r'^apply/$', 'mainApp.views.applyPage', name='apply'),
     # url(r'^$', 'home.views.home', name='home'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
