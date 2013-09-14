@@ -4,13 +4,13 @@ import os
 import sys
 
 #Note doesn't include last backslash
-ROOT_PATH = os.path.dirname(__file__)
+ROOT_PATH = os.getcwd()
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('eica', 'cmchacha@mit.edu'),
+    ('eica', 'cmchacha@mit.edu', 'philipa@mit.edu', 'kopiso@mit.edu'),
 )
 
 MANAGERS = ADMINS
@@ -71,8 +71,7 @@ STATIC_ROOT =  ""
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-import socket
-if sys.argv[1] == 'runserver':
+if 'runserver' in sys.argv:
     STATIC_URL = 'http://127.0.0.1:8000/static/'
 else:
     STATIC_URL = 'http://eica.scripts.mit.edu/static/'
@@ -80,7 +79,7 @@ else:
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(ROOT_PATH, '../frontEnd/static')
+    os.path.join(ROOT_PATH, 'static')
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -120,7 +119,6 @@ ROOT_URLCONF = 'home.urls'
 WSGI_APPLICATION = 'home.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(ROOT_PATH, '../frontEnd')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
