@@ -30,10 +30,10 @@
         <div class="large-9 columns">
             <ul class="button-group right">
                 <li>
-                    <a href="/home" class="button selected">Home</a>
+                    <a href="/home" class="button">Home</a>
                 </li>
                 <li>
-                    <a href="/about/" class="button">About</a>
+                    <a href="/about/" class="button selected">About</a>
                 </li>
                 <li>
                     <a href="/apply/" class="button">Apply</a>
@@ -48,7 +48,8 @@
         </div>
     </div><!-- End Header and Nav -->
 
-    <!-- Content -->\
+    <!-- Content -->
+    <!-- First Band -->
     <div class="row">
 <div class="large-12 columns" style="position: relative">
             <h1>About</h1>
@@ -67,32 +68,57 @@
 
             </div>
         </div>
-    </div><!-- End Content -->
+    </div><!-- End First Band -->
 
-    <!-- Footer -->
-    <footer class="row">
-        <div class="large-12 columns">
-            <hr />
+    <!-- Second Band (Image Left with Text) -->
+    <div class="row">
+        <div class="large-8 columns">
+            <h4>Some text here:</h4>
             <div class="row">
                 <div class="large-6 columns">
-                    <a href="http://mit.edu/"><img src="{{ STATIC_URL }}images/mit_logo.png"></a>
                     <p>
-                        &copy; 2013
+                        <b>Illah Nourbakhsh. Tech review: May 14, 2013</b>
+                        <br/>
+                        <br/>
+                        In the book Race Against the Machine, Erik Brynjolfsson and Andrew McAfee of MIT’s Sloan School of Management present a chart showing U.S. productivity, GDP, employment, and income from 1953 to 2011. The chart looks as you would expect from 1953 until the mid-1980s, with every one of the measures rising together: employees work more productively, companies make more money, and more hires occur as the middle class swells.<br/>
+
+                        .......
                     </p>
+                    <br/>
                 </div>
                 <div class="large-6 columns">
-                    <ul class="inline-list right">
-                        <li>
-                            <a href="/home">Home</a>
-                        </li>
-                        <li>
-                            <a href="/admin/">Admin</a>
-                        </li>
-                    </ul>
+                    <p>
+                        <br/>
+                        <br/>
+                        <br/>
+                        So how do we deal with the impending mass migration of robots into our middle class? Perhaps we should start by talking about it over dinner (robots don’t eat with us yet). I submit to you four dinnertime conversation starters, each of which I believe captures something essential to understanding why the impending Robot Revolution may be nothing like the Industrial Revolution<br/>
+                        .......
+
+                    </p>
+                    <br/>
                 </div>
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </div>
+
+	<!-- Third Band (Image Right with Text) -->
+    <div class="row">
+        <div class="large-8 columns">
+            <h4>Other text here:</h4>
+            <p><b>Chu. MIT News Office: March 8, 2013</b></p>
+            <p>
+                A 70-pound “cheetah” robot designed by MIT researchers may soon outpace its animal counterparts in running efficiency: In treadmill tests, the researchers have found that the robot — about the size and weight of an actual cheetah — wastes very little energy as it trots continuously for up to an hour and a half at 5 mph. The key to the robot’s streamlined stride: lightweight electric motors, set into its shoulders, that produce high torque with very little heat wasted<br/>
+                ......
+            </p>
+        </div>
+        <div class="large-4 columns">
+            <img src="{{ STATIC_URL }}images/placeholder_smallest.jpg">
+        </div>
+    </div><!-- End Third Band -->
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <!--#include virtual="footer.html" -->
 
     <script type="text/javascript">
         $('login_menu').click(function(e){
