@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html>
 	<!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
 
 		<!-- Set the viewport width to device width for mobile -->
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/ico" href="static/images/favicon.ico"/>
+		<link rel="icon" type="image/ico" href="{{ STATIC_URL }}images/favicon.ico"/>
 		<title>AfriContest Home</title>
 
-		<link rel="stylesheet" href="static/css/normalize.css">
-		<link rel="stylesheet" href="static/css/foundation.css">
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.css">
 
-		<script src="static/src/custom.modernizr.js"></script>
-		<script type="text/javascript" src="static/src/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="static/src/custom.js"></script>
-		<script src="static/src/form.js"></script>
+		<script src="{{ STATIC_URL }}src/custom.modernizr.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="{{ STATIC_URL }}src/form.js"></script>
 		<script>
 			$(document).ready(
 				function () {
@@ -33,15 +32,12 @@
 
 		<div class="row">
 			<div class="large-3 columns">
-				<h1><img src="static/images/logo.png" style="height: 90px"></h1>
+				<h1><img src="{{ STATIC_URL }}images/logo.png" style="height: 90px"></h1>
 			</div>
 			<div class="large-9 columns">
 				<ul class="button-group right">
 					<li>
 						<a href="#" class="button">Home</a>
-					</li>
-					<li>
-                        <a class="transition" href="/fade-in/"><button type="button">Fades</button></a>
 					</li>
 					<li>
 						<a href="#" class="button">Apply</a>
@@ -70,7 +66,7 @@
 						<input class="button" type="submit" value="LOGIN" style="height: 30px; padding: 5px">
 					</div>
 				</div>
-				<img src="static/images/placeholder_header.jpg">
+				<img src="{{ STATIC_URL }}images/placeholder_header.jpg">
 
 				<hr>
 			</div>
@@ -119,7 +115,7 @@ So how do we deal with the impending mass migration of robots into our middle cl
 				</p>
 			</div>
 			<div class="large-4 columns">
-				<img src="static/images/placeholder_smallest.jpg">
+				<img src="{{ STATIC_URL }}images/placeholder_smallest.jpg">
 			</div>
 		</div>
 
@@ -130,7 +126,7 @@ So how do we deal with the impending mass migration of robots into our middle cl
 				<hr />
 				<div class="row">
 					<div class="large-6 columns">
-						<a href="http://mit.edu/"><img src="static/images/mit_logo.png"></a>
+						<a href="http://mit.edu/"><img src="{{ STATIC_URL }}images/mit_logo.png"></a>
 						<p>
 							&copy; c
 						</p>
@@ -149,15 +145,14 @@ So how do we deal with the impending mass migration of robots into our middle cl
 			</div>
 		</footer>
 
-		<script>
-document.write('<script src=static/src/' +
-('__proto__' in {} ? 'zepto' : 'jquery') +
-'.js><\/script>')
-		</script>
-		<script src="static/src/foundation.min.js"></script>
-		<script>
-$(document).foundation();
-		</script>
+        <script>
+            document.write('<script src={{ STATIC_URL }}src/' +
+                ('__proto__' in {} ? 'zepto' : 'jquery') +'.js><\/script>');
+        </script>
+		<script src="{{ STATIC_URL }}src/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
 
 	</body>
 </html>
