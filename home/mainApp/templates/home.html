@@ -66,17 +66,7 @@
         <div class="large-12 columns" style="position: relative">
             <h4 class="text-center">Choose a country from the map</h4>
             <div style="text-align:center; margin-left:auto; margin-right:auto;">
-				<div id="login_form" class="form hide" style="right:10px; margin-top: -20px; z-index:2; margin-bottom: 100px; position: absolute; opacity: 0.9">
-					<div>
-						<input class="required" placeholder="Email (required)" type="text">
-					</div>
-					<div>
-						<input class="required" placeholder="Password (required)" type="password">
-					</div>
-					<div>
-						<input class="button" type="submit" value="LOGIN" style="height: 30px; padding: 5px">
-					</div>
-				</div>
+				{% include "login-box.html" %}
                 <img src="{{ STATIC_URL }}images/map-of-africa.png" border="0" width="1024" height="875" usemap="#map" />
                 <map name="map">
                     <!-- #$-:Image map file created by GIMP Image Map plug-in -->
