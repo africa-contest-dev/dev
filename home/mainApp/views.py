@@ -1,7 +1,8 @@
 # Create your views here.
+import urllib
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.http import Http404
+from django.http import HttpResponse
 
 
 country_to_flag_map = {'eg':'egypt-flag-map',
@@ -35,6 +36,15 @@ def applyPage(request):
 
 def contactPage(request):
     return render_to_response('contact.html',context_instance= RequestContext(request))
+
+def view_Constitution(request):
+    return output_file(request, '', 'application/pdf')
+
+def output_file(request, file, mime):
+    f = urllib.urlopen(file)
+    data = f.read()
+    f.close()
+    return HttpResponse(data, mimetype=mime)
 
 # def landing(request, page_number):
 #     try:
